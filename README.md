@@ -43,6 +43,9 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [35] Yang C H H, Danny I, Hung T, et al. Causal inference q-network: Toward resilient reinforcement learning[C]//Self-Supervision for Reinforcement Learning Workshop-ICLR 2021. 2021.
 - [36] Rezende D J, Danihelka I, Papamakarios G, et al. Causally correct partial models for reinforcement learning[J]. arXiv preprint arXiv:2002.02836, 2020.
 - [37] Learning Causal Dynamics Models in Object-Oriented Environments
+  - key: Objected-Oriented MDP (FMDP), Object-Oriented Causal Graph， Model-based
+  - **summary_CN**: 从MDP场景扩展到了FMDP，假设环境中存在不同类型的对象，也就是说Agent接收到的State由环境中各个对象的属性组成。传统的CRL方法会直接在属性层面进行因果关系发现，这种方法在变量少的时候表现不错，但是随着变量（对象）的增加，其开销会呈指数增长，于是作者提出可以class-level的角度去做因果发现然后再学习动力学模型，由原来的Causal dynamic model变为Object Oriented Causal Dynamic Model，从而大大缩小因果发现的开销并且对于对象数量的增加有一定的扩展性（注意如果是对象类型增加了，时间开销依然会增加）。
+对于面向对象的因果图(Object Oriented Causal Graph)的发现，作者依然是使用具有理论保证的条件独立性测试去做（实现方式是通过条件互信息CMI）。 假设有两种类型的对象，且每一种类型的对象有100个，那么现在只需要做类内（同一种类型对象）属性因果关系发现以及类间（不同类型对象）属性间因果关系发现即可。
 
 
 # Multi-Agent RL
