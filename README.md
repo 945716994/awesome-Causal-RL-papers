@@ -49,7 +49,7 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [1] Grimbly S J, Shock J, Pretorius A. Causal multi-agent reinforcement learning: Review and open problems[J]. arXiv preprint arXiv:2111.06721, 2021.
 
 
-# Other regime
+# Other direction
 - [1] Baradel F, Neverova N, Mille J, et al. Cophy: Counterfactual learning of physical dynamics[J]. arXiv preprint arXiv:1909.12000, 2019.
 - [2] Sancaktar C, Blaes S, Martius G. Curious exploration via structured world models yields zero-shot object manipulation[J]. Advances in Neural Information Processing Systems, 2022, 35: 24170-24183.
 - [3] Li Z, Zhu X, Lei Z, et al. Deconfounding Physical Dynamics with Global Causal Relation and Confounder Transmission for Counterfactual Prediction[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2022, 36(2): 1536-1545.
