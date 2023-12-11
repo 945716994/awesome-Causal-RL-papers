@@ -56,6 +56,10 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [1] Baradel F, Neverova N, Mille J, et al. Cophy: Counterfactual learning of physical dynamics[J]. arXiv preprint arXiv:1909.12000, 2019.
 - [2] Sancaktar C, Blaes S, Martius G. Curious exploration via structured world models yields zero-shot object manipulation[J]. Advances in Neural Information Processing Systems, 2022, 35: 24170-24183.
 - [3] Li Z, Zhu X, Lei Z, et al. Deconfounding Physical Dynamics with Global Causal Relation and Confounder Transmission for Counterfactual Prediction[C]//Proceedings of the AAAI Conference on Artificial Intelligence. 2022, 36(2): 1536-1545.
+- [4] What If You Were Not There? Learning Causally-Aware Representations of Multi-Agent Interactions (ICLR 2024 open review)
+  - key: Multi-agent forecasting, Causal effect， sim-to-real
+  - link: https://openreview.net/forum?id=viJlKbTfbb
+  - **summary_CN**: 本文的核心思想一句话说就是希望学习到的表征不仅能包含Direct causal agent对ego agent的causal effect,也希望可以包含Indirect causal agent对ego agent的causal effect（举个例子，你开车只看到了前面有个公交车，而公交车前面有个自行车，那么要预测你的开车轨迹不仅仅要考虑公交车还需要考虑自行车）。 这样学到的表征才能对扰动足够鲁棒，可以进行长时间步的rollout，可以快速的对新环境进行适应（前提是表征捕获到的因果机制在新环境也是相同的，Invariant Causal mechanism）。作者首先是根据一定的规则构造了反事实的数据集，并根据causal effect(paper中的公式2）对数据集中除了Ego agent以外的agent定义了三种agent：Non-causal agent、Direct causal agent、Indirect causal agent. 作者认为，如果agent $i$，$j$在场景A中的对于ego agent的causal effect $\epsilon_i$ < $\epsilon_j$，那么其在反事实场景中其causal effect也具有类似的关系。通过这样的直觉，作者分别制定了Causal Contrastive Learning以及Causal Ranking Learning两种学习方式去学习期望的表征。最终在in-distribution和OOD的实验下验证了其所提方法的有效性。
 
 # benchmark
 - [1] Ahmed O, Träuble F, Goyal A, et al. Causalworld: A robotic manipulation benchmark for causal structure and transfer learning[J]. arXiv preprint arXiv:2010.04296, 2020.
