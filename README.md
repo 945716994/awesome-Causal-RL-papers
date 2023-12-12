@@ -3,6 +3,7 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 
 # Blog
 - [1] https://crl.causalai.net/
+- [2] https://stjohngrimbly.com/causal-reinforcement-learning/
 
 # Survey
 - [1] Zeng, Y., Cai, R., Sun, F., Huang, L., & Hao, Z. (2023). A Survey on Causal Reinforcement Learning. arXiv preprint arXiv:2302.05209.
