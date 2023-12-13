@@ -55,6 +55,10 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 # Multi-Agent RL
 - [1] Grimbly S J, Shock J, Pretorius A. Causal multi-agent reinforcement learning: Review and open problems[J]. arXiv preprint arXiv:2111.06721, 2021.
 
+## Credit Assigment
+- [1] Pina R, De Silva V, Artaud C. Discovering Causality for Efficient Cooperation in Multi-Agent Environments[J]. arXiv preprint arXiv:2306.11846, 2023.
+  - key: Credit assigment, Non-linear Granger Causality, ACD
+  - **summary_CN**:本文聚焦与多智能体中的信用分配问题。该问题说的是这样一个情况：多个智能体做出了对应的行为，然后得到了环境返回的作为多个智能体联合行动的奖励。那么各个单独的智能体无法知道其行为是否好，如果使用团队奖励作为每个单智能体的奖励，那么就会导致那些实际没有共享的智能体得到一个lazy policy，而无法得到一个好的policy。作者通过使用ACD去发现每个智能体的观测o和奖励r之间的因果关系，然后根据这个因果关系对奖励进行分配，从而惩罚那些lazy agent.
 
 # Other direction
 - [1] Baradel F, Neverova N, Mille J, et al. Cophy: Counterfactual learning of physical dynamics[J]. arXiv preprint arXiv:1909.12000, 2019.
