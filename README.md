@@ -55,6 +55,11 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 # Multi-Agent RL
 - [1] Grimbly S J, Shock J, Pretorius A. Causal multi-agent reinforcement learning: Review and open problems[J]. arXiv preprint arXiv:2111.06721, 2021.
 
+## Non-stationarity
+-[1]Shantian Yang , Bo Yang , Zheng Zeng ,and Zhongfeng Kang.2023."Causal inference multi-agent reinforcement learning for traffic signal control".Information Fusion,94():243-256.https://doi.org/10.1016/j.inffus.2023.02.009
+  - key: traffic singal control, probabilistic inference, Latent variable
+  - **summary_CN**: 本文聚焦于交通场景中的路口信号灯控制任务，每个路口的红绿灯有单独一个智能体进行控制。在多智能体场景中，对与每个智能体而言，由于对环境的部分感知以及对其它智能体策略的未知，导致环境的dynamics对于每个个体而言都是非稳态的。在这种情况下，每个Agent仅依靠自身的观测所学习到的policy很可能是次优、甚至无效的。本文中作者认为每个Agent的所面临的非稳态可以被一个潜在的因果变量刻画，并且每个Agent对应的潜在因果变量之间是互相影响（局限于相邻的Agent），从而可以通过整个潜在因果变量集合从概率的角度去刻画环境的非稳态。作者通过使用自身以及相邻Agent的状态动作历史序列利用变分推断去推断出其潜在因果变量对应的分布。从我的视角来看，这篇文章并没用到相关因果推断的技术，也没解释为什么会存在这样一个Latent causal variable，它的Causality体现在哪里？
+
 ## Credit Assigment
 - [1] Pina R, De Silva V, Artaud C. Discovering Causality for Efficient Cooperation in Multi-Agent Environments[J]. arXiv preprint arXiv:2306.11846, 2023.
   - key: Credit assigment, Non-linear Granger Causality, ACD
