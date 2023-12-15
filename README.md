@@ -68,6 +68,9 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [2] Wang Z, Du Y, Zhang Y, et al. MACCA: Offline Multi-agent Reinforcement Learning with Causal Credit Assignment[J]. arXiv preprint arXiv:2312.03644, 2023.
   - key: Reward predictor, Dynamic Bayesian Network
   - **summary_CN**: 本文聚焦与多智能体中的信用分配问题。通过学习每个智能体的状态、动作和奖励（团队奖励）之间的因果关系，从而对每个智能体都生成一个个体奖励，进而指导智能体的学习。在这篇文章中，作者使用动态贝叶斯网络（DBN）来描述奖励的潜在生成过程。在本文中，考虑到多智能体场景的因果关系对应的dynamics可能随着时间而演变，其使用了一个因果结构预测器在每个时间步产生一个结构估计，然后基于此结构以及得到的团队奖励进行个体奖励的预测。
+- [3] Foerster J, Farquhar G, Afouras T, et al. Counterfactual multi-agent policy gradients[C]//Proceedings of the AAAI conference on artificial intelligence. 2018, 32(1).
+  - key: policy gradient, counterfactual, baseline function
+  - **summary_CN**: 简单来所，本文在Policy gradient的基础上引入了一个Counterfactual baseline，从而隐式的缓解了credit assigment的问题。 具体来说，这个方法应用与集中式训练的分布式执行的范式，在对每个Agent，计算优势函数的时候，使用Q网络估计在当前联合状态下其余Agent行为不变，而当前agent行为改变时（从a变成a’)，这样一个“反事实”的优势值，这个优势值可以理解成当前Agent对团队奖励的预期贡献。
 # Other direction
 - [1] Baradel F, Neverova N, Mille J, et al. Cophy: Counterfactual learning of physical dynamics[J]. arXiv preprint arXiv:1909.12000, 2019.
 - [2] Sancaktar C, Blaes S, Martius G. Curious exploration via structured world models yields zero-shot object manipulation[J]. Advances in Neural Information Processing Systems, 2022, 35: 24170-24183.
