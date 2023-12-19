@@ -71,6 +71,13 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [3] Foerster J, Farquhar G, Afouras T, et al. Counterfactual multi-agent policy gradients[C]//Proceedings of the AAAI conference on artificial intelligence. 2018, 32(1).
   - key: policy gradient, counterfactual, baseline function
   - **summary_CN**: 简单来所，本文在Policy gradient的基础上引入了一个Counterfactual baseline，从而隐式的缓解了credit assigment的问题。 具体来说，这个方法应用与集中式训练的分布式执行的范式，在对每个Agent，计算优势函数的时候，使用Q网络估计在当前联合状态下其余Agent行为不变，而当前agent行为改变时（从a变成a’)，这样一个“反事实”的优势值，这个优势值可以理解成当前Agent对团队奖励的预期贡献。
+ 
+## Scalability
+- [1] Ma H, Pu Z, Pan Y, et al. Causal Mean Field Multi-Agent Reinforcement Learning[C]//2023 International Joint Conference on Neural Networks (IJCNN). IEEE, 2023: 1-8.
+  - key: mean-filed，intervention， causal inference
+  - **summary_CN**:本文提出了一种名为因果平均场Q学习（CMFQ）的算法，通过建立结构因果模型（SCM）使用干预来量化每个智能体交互的重要程度，并基于此设计了因果感知的紧凑表示方法，实现了相比于之前MFRL的性能的提升。
+
+ 
 # Other direction
 - [1] Baradel F, Neverova N, Mille J, et al. Cophy: Counterfactual learning of physical dynamics[J]. arXiv preprint arXiv:1909.12000, 2019.
 - [2] Sancaktar C, Blaes S, Martius G. Curious exploration via structured world models yields zero-shot object manipulation[J]. Advances in Neural Information Processing Systems, 2022, 35: 24170-24183.
@@ -79,6 +86,7 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
   - key: Multi-agent forecasting, Causal effect， sim-to-real
   - link: https://openreview.net/forum?id=viJlKbTfbb
   - **summary_CN**: 本文的核心思想一句话说就是希望学习到的表征不仅能包含Direct causal agent对ego agent的causal effect,也希望可以包含Indirect causal agent对ego agent的causal effect（举个例子，你开车只看到了前面有个公交车，而公交车前面有个自行车，那么要预测你的开车轨迹不仅仅要考虑公交车还需要考虑自行车）。 这样学到的表征才能对扰动足够鲁棒，可以进行长时间步的rollout，可以快速的对新环境进行适应（前提是表征捕获到的因果机制在新环境也是相同的，Invariant Causal mechanism）。作者首先是根据一定的规则构造了反事实的数据集，并根据causal effect(paper中的公式2）对数据集中除了Ego agent以外的agent定义了三种agent：Non-causal agent、Direct causal agent、Indirect causal agent. 作者认为，如果agent $i$，$j$在场景A中的对于ego agent的causal effect $\epsilon_i$ < $\epsilon_j$，那么其在反事实场景中其causal effect也具有类似的关系。通过这样的直觉，作者分别制定了Causal Contrastive Learning以及Causal Ranking Learning两种学习方式去学习期望的表征。最终在in-distribution和OOD的实验下验证了其所提方法的有效性。
+
 
 # benchmark
 - [1] Ahmed O, Träuble F, Goyal A, et al. Causalworld: A robotic manipulation benchmark for causal structure and transfer learning[J]. arXiv preprint arXiv:2010.04296, 2020.
