@@ -52,7 +52,11 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 对于面向对象的因果图(Object Oriented Causal Graph)的发现，作者依然是使用具有理论保证的条件独立性测试去做（实现方式是通过条件互信息CMI）。 假设有两种类型的对象，且每一种类型的对象有100个，那么现在只需要做类内（同一种类型对象）属性因果关系发现以及类间（不同类型对象）属性间因果关系发现即可。
 - [38] Zhang Y, Du Y, Huang B, et al. Interpretable Reward Redistribution in Reinforcement Learning: A Causal Approach[C]//Thirty-seventh Conference on Neural Information Processing Systems. 2023.
   - key: delay reward
-
+- [39] Pan H R ,Gürtler, Nico, Neitz A ,et al.Direct Advantage Estimation[J].  2021.DOI:10.48550/arXiv.2109.06093.
+  - key: causal effect, advantage function, credit assigment
+  - **summary_CN** : 这篇文章说明了，在一定的假设下，优势函数可以看作动作对期望回报的因果效应，并且提出了一种可以直接从轨迹数据中估计优势函数的方法，并且在大多数环境中，相比于GAE能够更好的提升策略性能。
+ 
+  
 # Multi-Agent RL
 - [1] Grimbly S J, Shock J, Pretorius A. Causal multi-agent reinforcement learning: Review and open problems[J]. arXiv preprint arXiv:2111.06721, 2021.
 
