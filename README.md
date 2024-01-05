@@ -55,6 +55,9 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [39] Pan H R ,Gürtler, Nico, Neitz A ,et al.Direct Advantage Estimation[J].  2021.DOI:10.48550/arXiv.2109.06093.
   - key: causal effect, advantage function, credit assigment
   - **summary_CN** : 这篇文章说明了，在一定的假设下，优势函数可以看作动作对期望回报的因果效应，并且提出了一种可以直接从轨迹数据中估计优势函数的方法，并且在大多数环境中，相比于GAE能够更好的提升策略性能。
+- [40] Corcoll O, Vicente R. Disentangling causal effects for hierarchical reinforcement learning[J]. arXiv preprint arXiv:2010.01351, 2020.
+  - key: causal-effect, hierarchical RL
+  - **summy_CN**: 这篇文章通过将由Action导致的环境变化(control effect)从总听的变化(total effect）中解耦出来。基于解耦得到的control effect进行探索、学习。本质上，control effect描述了代理在环境做动作中引起的改变。这些改变在本质上是可组合的和时间抽象的，使它们非常适合于描述性任务。 比如说捡起一个球，走到特定位置就是捡起球和移动这两个动作可以描述的任务。基于control effect，文章设计了一种分层强化学习框架(CEHRL), 在MiniGrid环境中进行了相关实验验证其性能。
  
   
 # Multi-Agent RL
