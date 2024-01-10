@@ -58,6 +58,11 @@ Here is a list of papers related to causal reinforcement learning, and I hope yo
 - [40] Corcoll O, Vicente R. Disentangling causal effects for hierarchical reinforcement learning[J]. arXiv preprint arXiv:2010.01351, 2020.
   - key: causal-effect, hierarchical RL
   - **summy_CN**: 这篇文章通过将由Action导致的环境变化(control effect)从总听的变化(total effect）中解耦出来。基于解耦得到的control effect进行探索、学习。本质上，control effect描述了代理在环境做动作中引起的改变。这些改变在本质上是可组合的和时间抽象的，使它们非常适合于描述性任务。 比如说捡起一个球，走到特定位置就是捡起球和移动这两个动作可以描述的任务。基于control effect，文章设计了一种分层强化学习框架(CEHRL), 在MiniGrid环境中进行了相关实验验证其性能。
+
+## Offline RL
+- [1] Sun Z, He B, Liu J, et al. Offline Imitation Learning with Variational Counterfactual Reasoning[C]//Thirty-seventh Conference on Neural Information Processing Systems. 2023.
+  - key: counterfactual, Data Augment
+  - **summary_CN** :本篇文章提出了在Offline场景中，如何使用反事实基于未标记的数据生成反事实的专家数据，从而对原有的专家数据集进行扩充。
  
   
 # Multi-Agent RL
